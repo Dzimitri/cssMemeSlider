@@ -20,6 +20,7 @@
     margin: 0 auto;
     width: 60vw;
     overflow: hidden;
+    padding-top: 2rem;
 }
 
 .slider {
@@ -30,6 +31,7 @@
     -moz-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
     -o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
     transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+
 }
 
 .image_wrapper {
@@ -45,6 +47,7 @@
     width: inherit;
     margin: auto;
     object-fit: contain;
+   
 }
 
 .signatures_controls {
@@ -87,12 +90,12 @@
 }
 
 .control {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #fff;
+    width: 1rem;
+    height: 1rem;
+    background-color: #1252f4;
     appearance: none;
     border-radius: 50%;
-    border: .2rem solid #fff;
+    border: .2rem solid #1252f4;
     cursor: pointer;
     transition: .5s;
 }
@@ -113,7 +116,7 @@
 
 .control:checked:hover,
 .control:active:hover {
-    background-color: #5b5858;
+    border-color: #5b5858;
 }
 
 .slider_wrapper:has(#slide1:checked) .slider {
@@ -146,4 +149,31 @@
 
 .slider_wrapper:has(#slide4:checked) .text_container {
     transform: translateX(-300%);
+}
+
+@media (max-width: 35.5rem) {
+    .slider_wrapper {
+        width: 80vw;
+    }
+
+    .slider,
+    .image {
+        height: 40vh;
+    }
+
+    .signatures_controls {
+        margin: 1rem auto;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .text_wrapper {
+        width: 100%;
+    }
+
+    .controls {
+        align-self: center;
+    }
 }
